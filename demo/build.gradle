@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 android {
-    compileSdkVersion 33
+    compileSdkVersion 34
 
     defaultConfig {
-        applicationId "com.carlos.grabredenvelope.demo"
+        applicationId "com.carlos.hongbaoqiang.demo"
         minSdkVersion 18
-        targetSdkVersion 33
+        targetSdkVersion 34
         versionCode 1
         versionName "1.0"
 
@@ -23,18 +23,21 @@ android {
     lint {
         disable 'GoogleAppIndexingWarning'
     }
-    namespace 'com.carlos.grabredenvelope.demo'
+    namespace 'com.carlos.hongbaoqiang.demo'
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_11
+    }
 
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.github.xbdcc:cutils:0.0.18'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    testImplementation 'junit:junit:4.13.2'
+//    androidTestImplementation 'androidx.test:runner:1.1.1'
+//    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.0.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
 
 }
 

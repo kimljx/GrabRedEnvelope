@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">抢红包</string>
-    <string name="app_name_dev">抢红包DEV</string>
-    <string name="app_content">小不点</string>
+    <string name="app_name">红包助手</string>
+    <string name="app_name_dev">红包助手DEV</string>
+    <string name="app_content">红包助手</string>
 
     <string name="grab_wechat_envelope">抢微信红包</string>
     <string name="grab_dingding_envelope">抢钉钉红包</string>
@@ -19,8 +19,8 @@
         \n7.自定义拆红包按钮坐标：该功能针对Android7.0以上设备开放，为了解决部分手机自动点击红包但不会自动拆的问题，未开启则使用自动识别点击功能，开启则使用自定义拆按钮坐标点；
         \n8.自动发表情：开启后聊天页面可按次数和间隔自动发送表情，实现快速放烟花的效果等；
         \n9.不抢的群或人：设置后当前页面有设置的关键字则不会点击。
-        \n\n
-        \n代码开源仅供学习使用，请勿用作商业用途
+<!--        \n\n-->
+<!--        \n代码开源仅供学习使用，请勿用作商业用途-->
 <!--        \nAPP说明：http://xbdcc.cn/GrabRedEnvelope/index.html-->
 <!--        \n代码地址：https://github.com/xbdcc/GrabRedEnvelope-->
 <!--        \n\简单教程：https://github.com/xbdcc/GrabRedEnvelope/blob/master/demo/README.md-->
@@ -29,15 +29,17 @@
 
 
     <string name="wechat_description">
-        使用指南：使用前仔细看APP使用说明。辅助功能开启【抢微信红包】，APP 抢微信红包设置是否监控通知和聊天列表页面，同时可设置延迟时间。代码开源仅供学习使用，请勿用作商业用途。
-        \n\n如果有遇到说明里除已知bug外的问题, 欢迎通过 GitHub Issue 反馈:https://github.com/xbdcc/GrabRedEnvelope。
-        \n\n有问题也可联系偶尔会使用的微信：xbdcc1。
-        \n\n ——made by 小不点</string>
+        使用指南：使用前仔细看APP使用说明。辅助功能开启【抢微信红包】，APP 抢微信红包设置是否监控通知和聊天列表页面，同时可设置延迟时间。
+<!--        \n\n如果有遇到说明里除已知bug外的问题, 欢迎通过 GitHub Issue 反馈:https://github.com/xbdcc/GrabRedEnvelope。-->
+<!--        \n\n有问题也可联系偶尔会使用的微信：xbdcc1。-->
+<!--        \n\n ——made by 作者-->
+    </string>
     <string name="emoji_description">
         使用指南：使用前仔细看APP使用说明。辅助功能开启【自动发送表情】，支持设置自动输入文本、发送次数、发送间隔时间。代码开源仅供学习使用，请勿用作商业用途。
-        \n\n如果有遇到说明里除已知bug外的问题, 欢迎通过 GitHub Issue 反馈:https://github.com/xbdcc/GrabRedEnvelope。
-        \n\n有问题也可联系偶尔会使用的微信：xbdcc1。
-        \n\n ——made by 小不点</string>
+<!--        \n\n如果有遇到说明里除已知bug外的问题, 欢迎通过 GitHub Issue 反馈:https://github.com/xbdcc/GrabRedEnvelope。-->
+<!--        \n\n有问题也可联系偶尔会使用的微信：xbdcc1。-->
+<!--        \n\n ——made by 作者-->
+    </string>
 
     <string name="dingding_description">基于钉钉5.0.5版本开发，不做版本适配，只监听当前对话页面红包</string>
 

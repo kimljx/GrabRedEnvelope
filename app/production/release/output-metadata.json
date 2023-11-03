@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.carlos.hongbaoqiang",
+  "variantName": "productionRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 350,
+      "versionName": "3.5.0",
+      "outputFile": "GrabRedEnvelope3.5.0.apk"
+    }
+  ],
+  "elementType": "File"
+}

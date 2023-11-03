@@ -26,12 +26,12 @@ android {
             storePassword defaultProperties['storePassword']
         }
     }
-    compileSdkVersion 33
+    compileSdkVersion 34
 
     defaultConfig {
-        applicationId "com.carlos.grabredenvelope"
+        applicationId "com.carlos.hongbaoqiang"
         minSdkVersion 18
-        targetSdkVersion 33
+        targetSdkVersion 34
         versionCode 350
         versionName "3.5.0"
         flavorDimensions "350" //和versionCode相同
@@ -82,7 +82,7 @@ android {
             enabled = true
         }
     }
-    namespace 'com.carlos.grabredenvelope'
+    namespace 'com.carlos.hongbaoqiang'
 
 }
 
@@ -113,7 +113,7 @@ sentry {
 
 greendao {
     schemaVersion 2//数据库版本号
-    daoPackage 'com.carlos.grabredenvelope.db'//设置DaoMaster、DaoSession、Dao包名
+    daoPackage 'com.carlos.hongbaoqiang.db'//设置DaoMaster、DaoSession、Dao包名
     targetGenDir 'src/main/java'//设置DaoMaster、DaoSession、Dao目录
     //targetGenDirTest：设置生成单元测试目录
     //generateTests：设置自动生成单元测试用例
@@ -123,9 +123,9 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1"
 
-    testImplementation 'junit:junit:4.13.1'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
     androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.2.0'
 
@@ -142,7 +142,7 @@ dependencies {
     implementation 'com.umeng.umsdk:apm:1.7.0' // 错误分析模块改为独立库，看crash和性能数据请一定集成
 
     implementation 'io.sentry:sentry-android:6.10.0'
-    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'com.google.android.material:material:1.10.0'
 
     implementation 'org.greenrobot:greendao:3.2.2' // add library
 

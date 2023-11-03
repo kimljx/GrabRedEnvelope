@@ -213,7 +213,7 @@
                 android:id="@+id/et_text_filters"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="小不点"
+                android:text="作者"
                 />
         </LinearLayout>
     </ScrollView>
