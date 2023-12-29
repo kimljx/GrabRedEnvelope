@@ -33,10 +33,12 @@ import kotlinx.coroutines.launch
  *                            O\  =  /O
  *                         ____/`---'\____
  *                       .'  \\|     |//  `.
+ *
  *                      /  \\|||  :  |||//  \
  *                     /  _||||| -:- |||||-  \
  *                     |   | \\\  -  /// |   |
  *                     | \_|  ''\---/''  |   |
+ *
  *                     \  .-\__  `-`  ___/-. /
  *                   ___`. .'  /--.--\  `. . __
  *                ."" '<  `.___\_<|>_/___.'  >'"".
@@ -101,6 +103,7 @@ class WechatService : BaseAccessibilityService() {
     override fun monitorWindowChanged(event: AccessibilityEvent) {
         LogUtils.d("monitorWindowChanged:$event")
 
+
         if(WechatFilter.isRemarkFilter(rootInActiveWindow)) return
 
         openRedEnvelope(event)
@@ -113,7 +116,7 @@ class WechatService : BaseAccessibilityService() {
         if(WechatFilter.isRemarkFilter(rootInActiveWindow)) return
 
         GlobalScope.launch {
-            delay(100L)
+            delay(80L)
             grabRedEnvelope()
         }
         monitorChat()
@@ -178,7 +181,7 @@ class WechatService : BaseAccessibilityService() {
 
         GlobalScope.launch {
             LogUtils.d("start find open id")
-            val envelopes = getNodeInfosByViewId(RED_ENVELOPE_OPEN_ID,100, 5)
+            val envelopes = getNodeInfosByViewId(RED_ENVELOPE_OPEN_ID,80, 5)
             LogUtils.d("end find open id")
             if (envelopes.isNullOrEmpty()) {
                 // 没有开按钮，则点击退出按钮
@@ -187,7 +190,7 @@ class WechatService : BaseAccessibilityService() {
                 return@launch
             }
 
-            val delayTime = 100L + 1000L * RedEnvelopePreferences.wechatControl.delayOpenTime
+            val delayTime = 80L + 1000L * RedEnvelopePreferences.wechatControl.delayOpenTime
             LogUtils.d("delay open time:$delayTime")
             delay(delayTime)
             clickFirstNodeInfo(envelopes, true)
@@ -203,7 +206,6 @@ class WechatService : BaseAccessibilityService() {
         if (status != HAS_CLICKED) {
             return
         }
-
         val path = Path()
         if (RedEnvelopePreferences.wechatControl.isCustomClick) {
             path.moveTo(
@@ -211,9 +213,9 @@ class WechatService : BaseAccessibilityService() {
                 RedEnvelopePreferences.wechatControl.pointY.toFloat()
             )
         }
-        val delayTime = 100L + 1000L * RedEnvelopePreferences.wechatControl.delayOpenTime
+        val delayTime = 80L + 1000L * RedEnvelopePreferences.wechatControl.delayOpenTime
         LogUtils.d("delay custom open time:$delayTime")
-        gesturePath(path,  delayTime, interval = 100, times = 3)
+        gesturePath(path,  delayTime, interval = 80, times = 3)
         status = HAS_OPENED
         LogUtils.d("opened a redenvelope")
     }
